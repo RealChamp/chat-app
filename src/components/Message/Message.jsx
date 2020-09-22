@@ -3,8 +3,7 @@ import PropTypes from 'prop-types';
 import distanceInWordsToNow from 'date-fns/distance_in_words_to_now';
 import ruLocale from 'date-fns/locale/ru';
 import './Message.scss';
-// import classNames from 'classnames'
-import checkedMessage from '../../assets/img/double-checked.svg';
+import checkedMessageModify from '../../assets/img/double-checked-modify.svg';
 import uncheckedMessage from '../../assets/img/checked.svg'
 
 
@@ -20,7 +19,7 @@ function Message({ avatar, text, date, isMe, isReaded }) {
           <p className="message__text">{text}</p>
         </div>
         {isReaded ? (
-            <img className='checked-icon' src={checkedMessage} alt=""/>
+            <img className='checked-icon' src={checkedMessageModify} alt=""/>
         ) : (
             <img className='unchecked-icon' src={uncheckedMessage} alt=""/>
         )

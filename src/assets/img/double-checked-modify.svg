@@ -1,0 +1,12 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 42 20.23">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #0c8fe4;
+      }
+    </style>
+  </defs>
+  <title>double-checked-modify</title>
+  <path class="cls-1" d="M10.33,20.23.23,10.13A.79.79,0,1,1,1.35,9l9,9L28.08.23A.79.79,0,1,1,29.2,1.35Z"/>
+  <path class="cls-1" d="M41.77.23a.79.79,0,0,0-1.12,0L22.9,18l-3.42-3.42-1.12,1.12,4.54,4.54L41.77,1.35A.79.79,0,0,0,41.77.23Z"/>
+</svg>

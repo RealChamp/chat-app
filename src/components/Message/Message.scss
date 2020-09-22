@@ -29,15 +29,22 @@
     max-width: 440px;
   }
 
-  .checked-icon {
-    width: 50px;
-    height: 50px;
+  .checked-icon,
+  .unchecked-icon {
     align-self: flex-end;
+    margin-bottom: 8px;
+    margin-left: 7px;
+  }
+
+  .checked-icon {
+    width: 20px;
+    height: 20px;
   }
 
   .unchecked-icon {
-    width: 30px;
-    height: 30px;
+    width: 15px;
+    height: 15px;
+    
     align-self: flex-end;
   }
 
@@ -78,12 +85,14 @@
       }
     }
 
-    .double-checked-icon {
+    .checked-icon,
+    .unchecked-icon{
       order: 1;
+      margin-left: 0;
+      margin-right: 8px;
     }
-
     #{$self}__date {
-      margin-left: 68px;
+      margin-left: 43px;
     }
   }
 }
