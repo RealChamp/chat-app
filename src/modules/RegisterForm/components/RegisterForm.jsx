@@ -18,7 +18,7 @@ class RegisterForm extends Component {
             <Block>
               {!success ? (
                 <Form onSubmit={this.handleSubmit} className="login-form">
-                  <Form.Item validateStatus="success" hasFeedBack>
+                  <Form.Item validateStatus="success" hasFeedback>
                     <Input
                      prefix={<MailOutlined style={{ color: 'rgba(0,0,0,.25)' }} />}
                       size="large"

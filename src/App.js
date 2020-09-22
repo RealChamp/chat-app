@@ -1,11 +1,13 @@
 import React, { Component } from 'react'
-import {Auth} from './pages'
+import {Route} from 'react-router-dom'
+import {Auth, Home} from './pages'
 
 export class App extends Component {
-  render() {
+  render() {    
     return (
       <div className="wrapper">
-       <Auth/>
+       <Route exact path={['/', '/login']} component={Auth} />
+      <Route exact path={'/im'} component={Home} />
       </div>
     );
   }

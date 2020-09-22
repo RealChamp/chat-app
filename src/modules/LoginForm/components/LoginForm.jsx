@@ -16,7 +16,7 @@ class LoginForm extends Component {
             </div>
             <Block>
               <Form onSubmit={this.handleSubmit} className="login-form">
-                <Form.Item validateStatus="success" hasFeedBack>
+                <Form.Item validateStatus="success" hasFeedback>
                   <Input
                     prefix={<UserOutlined style={{ color: 'rgba(0,0,0,.25)' }} />}
                     size="large"

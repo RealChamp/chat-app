@@ -1,3 +1,4 @@
+@import 'normalize.css/normalize';
 @import 'antd/dist/antd';
 
 html,
@@ -6,4 +7,9 @@ body,
 .wrapper {
     height: 100%;
     color: #202020;
+}
+
+p {
+    margin: 0;
+    padding: 0;
 }
