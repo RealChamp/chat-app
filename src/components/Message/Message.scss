@@ -1,16 +1,21 @@
 @import '../../styles/variables';
 
 .message {
-  display: flex;
+  $self: &;
   max-width: 440px;
-  &__avatar {
-    align-self: flex-end;
-    img {
-      width: 33px;
-      height: 33px;
-      border-radius: 50%;
-      margin-right: 13px;
-      margin-bottom: 34px;
+  &__content {
+    display: flex;
+    max-width: 440px;
+    word-wrap: break-word;
+    .message__avatar {
+      align-self: flex-end;
+      img {
+        width: 33px;
+        height: 33px;
+        border-radius: 50%;
+        margin-right: 13px;
+        margin-bottom: 10px;
+      }
     }
   }
 
@@ -21,16 +26,64 @@
     border-radius: 12px 12px 12px 0px;
     margin-bottom: 8px;
     padding: 15px;
+    max-width: 440px;
+  }
+
+  .checked-icon {
+    width: 50px;
+    height: 50px;
+    align-self: flex-end;
+  }
+
+  .unchecked-icon {
+    width: 30px;
+    height: 30px;
+    align-self: flex-end;
   }
 
   &__date {
-    display: block;
+    display: inline;
     font-size: 0.75rem;
     opacity: 0.48;
+    margin-left: 45px;
   }
 
   &__text {
     color: #fff;
     line-height: 1.25rem;
+  }
+
+  &--isme {
+    float: right;
+    flex-direction: row-reverse;
+
+    #{$self}__avatar {
+      order: 3;
+      img {
+        margin-right: 0;
+        margin-left: 13px;
+        order: 3;
+      }
+    }
+
+    #{$self}__bubble {
+      background-color: #fff;
+      border: 1px solid #ececec;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.220444);
+      border-radius: 12px 12px 0 12px;
+      order: 2;
+
+      #{$self}__text {
+        color: #000;
+      }
+    }
+
+    .double-checked-icon {
+      order: 1;
+    }
+
+    #{$self}__date {
+      margin-left: 68px;
+    }
   }
 }
