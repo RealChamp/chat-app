@@ -44,7 +44,7 @@
   .unchecked-icon {
     width: 15px;
     height: 15px;
-    
+
     align-self: flex-end;
   }
 
@@ -59,6 +59,21 @@
     color: #fff;
     line-height: 1.25rem;
   }
+
+  &__attachments {
+    display: flex;
+    align-items: center;
+    margin-left: 42px;
+
+    &-item img {
+      width: 50px;
+      height: 50px;
+      border-radius: 6px;
+      margin-left: 5px;
+    }
+  }
+
+  // reverse message
 
   &--isme {
     float: right;
@@ -86,13 +101,20 @@
     }
 
     .checked-icon,
-    .unchecked-icon{
+    .unchecked-icon {
       order: 1;
       margin-left: 0;
       margin-right: 8px;
     }
     #{$self}__date {
-      margin-left: 43px;
+      display: block;
+      text-align: right;
+      margin-right: 47px;
+    }
+
+    #{$self}__attachments{
+      margin-left: 0;
+      margin-right: 42px;
     }
   }
 }
