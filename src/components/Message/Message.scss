@@ -64,6 +64,7 @@
     display: flex;
     align-items: center;
     margin-left: 42px;
+    cursor: pointer;
 
     &-item img {
       width: 50px;
@@ -78,6 +79,10 @@
   &--isme {
     float: right;
     flex-direction: row-reverse;
+
+    #{$self}__content { 
+      justify-content: flex-end;
+    }
 
     #{$self}__avatar {
       order: 3;
@@ -114,7 +119,8 @@
 
     #{$self}__attachments{
       margin-left: 0;
-      margin-right: 42px;
+      margin-right: 45px;
+      justify-content: flex-end;
     }
   }
 }

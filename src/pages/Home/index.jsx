@@ -8,7 +8,7 @@ function Home() {
       <Message
         avatar="https://randomuser.me/api/portraits/women/44.jpg"
         text="Hello"
-        date="Tue Sep 22 2020 19:58:20"
+        date="Tue Oct 3 2020 16:20:20"
         isMe={true}
         isReaded={false}
         attachments={[
@@ -16,20 +16,13 @@ function Home() {
              filename: 'image.jpg',
              url: 'https://source.unsplash.com/100x100/?random=1&nature,water',
            },
-           {
-             filename: 'image.jpg',
-             url: 'https://source.unsplash.com/100x100/?random=2&nature,water',
-           },
-           {
-             filename: 'image.jpg',
-             url: 'https://source.unsplash.com/100x100/?random=3&nature,water',
-           }
+          
         ]}
       />
       <Message
         avatar="https://randomuser.me/api/portraits/women/43.jpg"
         text="Hello World Test"
-        date="Tue Sep 22 2020 19:58:20"
+        date="Tue Tue Oct 3 2020 16:26:20"
         isMe={false}
         isReaded={true}
         attachments={[
@@ -37,14 +30,7 @@ function Home() {
              filename: 'image.jpg',
              url: 'https://source.unsplash.com/100x100/?random=1&nature,water',
            },
-           {
-             filename: 'image.jpg',
-             url: 'https://source.unsplash.com/100x100/?random=2&nature,water',
-           },
-           {
-             filename: 'image.jpg',
-             url: 'https://source.unsplash.com/100x100/?random=3&nature,water',
-           }
+          
         ]}
       />
     </section>
