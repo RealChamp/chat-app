@@ -4,6 +4,7 @@ import {ExclamationCircleTwoTone,MailOutlined,
   UserOutlined, LockOutlined } from '@ant-design/icons';
 import {Link} from 'react-router-dom'
 import {Button, Block} from '../../../components'
+import {validationField} from '../../../utils/helpers'
 
 const success = false;
 
@@ -15,8 +16,6 @@ const RegisterForm = (props) => {
     handleChange,
     handleBlur,
     handleSubmit,
-    isValid,
-    isSubmitting
   } = props;
   return (
     <div>
@@ -27,7 +26,7 @@ const RegisterForm = (props) => {
       <Block>
         {!success ? (
           <Form onSubmit={handleSubmit} className="login-form">
-            <Form.Item validateStatus={!touched.email ? '' : errors.email ? 'error' : 'success'} help={!touched.email ? null : errors.email } hasFeedback>
+            <Form.Item validateStatus={validationField('email', touched, errors)} help={!touched.email ? null : errors.email } hasFeedback>
               <Input
               id='email'
                prefix={<MailOutlined style={{ color: 'rgba(0,0,0,.25)' }} />}
@@ -38,12 +37,12 @@ const RegisterForm = (props) => {
                 onBlur={handleBlur}
               />
             </Form.Item>
-            <Form.Item>
+            <Form.Item hasFeedback>
               <Input
                 prefix={<UserOutlined style={{ color: 'rgba(0,0,0,.25)' }} />}
                size="large" placeholder="Ваше имя" />
             </Form.Item>
-            <Form.Item validateStatus={!touched.password ? '' : errors.password ? 'error' : 'success'}
+            <Form.Item validateStatus={validationField('password', touched, errors)}
             help={!touched.password ? null : errors.password }
             hasFeedback >
               <Input
@@ -57,16 +56,16 @@ const RegisterForm = (props) => {
                 onBlur={handleBlur}
               />
             </Form.Item>
-            <Form.Item>
+            <Form.Item validateStatus={validationField('password', touched, errors)} hasFeedback>
               <Input
                 prefix={<LockOutlined style={{ color: 'rgba(0,0,0,.25)' }} />}
                 size="large"
-                type="password"
+                type="password2"
                 placeholder="Повторите пароль"
               />
             </Form.Item>
             <Form.Item>
-            {!isValid && 'Error'}
+            {/* TODO isValid Error for form */}
               <Button onClick={handleSubmit} type="primary" size="large">
                 Зарегистрироваться
               </Button>
