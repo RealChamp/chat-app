@@ -3,6 +3,11 @@
 .message {
   $self: &;
   max-width: 440px;
+  float: left;
+  clear:both;
+  &:not(:first-child) {
+    margin-top: 25px;
+  }
   &__content {
     display: flex;
     max-width: 440px;
@@ -76,9 +81,12 @@
 
   // reverse message
 
-  &--isme {
+  &--isntme {
     float: right;
     flex-direction: row-reverse;
+    clear: both;
+
+ 
 
     #{$self}__content { 
       justify-content: flex-end;
@@ -122,5 +130,67 @@
       margin-right: 45px;
       justify-content: flex-end;
     }
+  }
+
+    &--is-typing {
+      #{$self}__bubble {
+        background-color: #e5edff;
+        box-shadow: 0px 5px 5px rgba(31, 46, 78, 0.04);
+        padding: 15px 20px;
+      }
+    }
+
+    &--image {
+      display: flex;
+      position: relative;
+      #{$self}__content {
+        /* TODO fix bottom coord for checked */
+        .unchecked-icon,
+        .checked-icon {
+          position: absolute;
+          left: 100%;
+          bottom: -5%;
+        }
+      }
+      #{$self}__attachments {
+        margin-left: 0;
+        .message__attachments-item img{
+          display: block;
+          width: 180px;
+          height: 150px;
+        }
+      }
+    }
+
+    &__typing {
+      span {
+        display: inline-block;
+        height: 9px;
+        width: 9px;
+        border-radius: 50%;
+        background-color: #a6bdf0;
+        margin-right: 0.5rem;
+        animation-name: typingAnimation ;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+        animation-duration: 1.3s;
+        animation-direction: normal;
+  
+        &:nth-of-type(2) {
+          animation-delay: .1s;
+        }
+        &:nth-of-type(3) {
+          animation-delay: .2s;
+        }
+      }
+    }
+}
+
+@keyframes typingAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }

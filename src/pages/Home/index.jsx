@@ -33,6 +33,24 @@ function Home() {
           
         ]}
       />
+      <Message
+        avatar="https://randomuser.me/api/portraits/women/44.jpg"
+        isMe={true}
+        isReaded={false}
+        isTyping={true}
+      />
+      <Message
+        avatar="https://randomuser.me/api/portraits/women/44.jpg"
+        attachments={[
+           {
+             filename: 'image.jpg',
+             url: 'https://source.unsplash.com/100x100/?random=1&nature,water',
+           },
+        ]}
+        isMe={true}
+        isReaded={false}
+      />
+
     </section>
   );
 }
